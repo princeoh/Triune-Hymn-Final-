@@ -23,7 +23,6 @@ android {
 
   signingConfigs {
     create("release") {
-      // Only use keystore if env vars exist AND file exists
       val keystorePath = System.getenv("KEYSTORE_PATH") ?: "${rootDir}/my-upload-key.jks"
       val ksFile = file(keystorePath)
       if (ksFile.exists() && System.getenv("STORE_PASSWORD") != null) {
@@ -40,14 +39,12 @@ android {
       isCrunchPngs = false
       isMinifyEnabled = false
       proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-      // Only apply release signing if keystore exists
       val keystorePath = System.getenv("KEYSTORE_PATH") ?: "${rootDir}/my-upload-key.jks"
       if (file(keystorePath).exists() && System.getenv("STORE_PASSWORD") != null) {
         signingConfig = signingConfigs.getByName("release")
       }
     }
-    debug {
-    }
+    debug {}
   }
   compileOptions {
     sourceCompatibility = JavaVersion.VERSION_11
@@ -74,7 +71,8 @@ googleServices { missingGoogleServicesStrategy = MissingGoogleServicesStrategy.W
 
 dependencies {
   implementation(platform(libs.androidx.compose.bom))
-  implementation(platform(libs.firebase.bom))
+  // FIREBASE DISABLED FOR NOW TO STOP CRASH - WE WILL ENABLE LATER WITH REAL KEY
+  // implementation(platform(libs.firebase.bom))
   implementation(libs.androidx.activity.compose)
   implementation(libs.androidx.compose.material.icons.core)
   implementation(libs.androidx.compose.material.icons.extended)
@@ -90,7 +88,7 @@ dependencies {
   implementation(libs.androidx.room.ktx)
   implementation(libs.androidx.room.runtime)
   implementation(libs.converter.moshi)
-  implementation(libs.firebase.firestore)
+  // implementation(libs.firebase.firestore)
   implementation(libs.kotlinx.coroutines.android)
   implementation(libs.kotlinx.coroutines.core)
   implementation(libs.logging.interceptor)
