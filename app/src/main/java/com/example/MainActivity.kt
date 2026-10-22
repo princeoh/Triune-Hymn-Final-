@@ -1,16 +1,16 @@
 package com.example
 
+import android.app.Activity
 import android.os.Bundle
 import android.widget.TextView
-import androidx.activity.ComponentActivity
 
-class MainActivity : ComponentActivity() {
+class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val textView = TextView(this)
-        textView.text = "HELLO PRINCE! If you see this, we won!"
-        textView.textSize = 22f
-        textView.setPadding(50, 300, 50, 50)
-        setContentView(textView)
+        val tv = TextView(this)
+        tv.text = "HELLO PRINCE - PURE ANDROID"
+        tv.textSize = 24f
+        tv.setPadding(60, 400, 60, 60)
+        setContentView(tv)
     }
 }
