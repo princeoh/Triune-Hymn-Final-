@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Golden Trinity Ring -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#D4AF37"
+        android:strokeWidth="2.5"
+        android:pathData="M 54,53 m -18,0 a 18,18 0 1,1 36,0 a 18,18 0 1,1 -36,0" />
+    
+    <!-- Central Cross -->
+    <path
+        android:fillColor="#D4AF37"
+        android:pathData="M51.5,27 h5 v40 h-5 z" />
+    <path
+        android:fillColor="#D4AF37"
+        android:pathData="M38,37 h32 v5 h-32 z" />
+    
+    <!-- Cross finials -->
+    <path
+        android:fillColor="#FFDF73"
+        android:pathData="M 54,26 m -3,0 a 3,3 0 1,1 6,0 a 3,3 0 1,1 -6,0" />
+    <path
+        android:fillColor="#FFDF73"
+        android:pathData="M 37,39.5 m -2.5,0 a 2.5,2.5 0 1,1 5,0 a 2.5,2.5 0 1,1 -5,0" />
+    <path
+        android:fillColor="#FFDF73"
+        android:pathData="M 71,39.5 m -2.5,0 a 2.5,2.5 0 1,1 5,0 a 2.5,2.5 0 1,1 -5,0" />
+
+    <!-- Open Hymn Book at bottom -->
+    <path
+        android:fillColor="#FFFEFA"
+        android:strokeColor="#D4AF37"
+        android:strokeWidth="1.5"
+        android:pathData="M 36,68 C 42,65 50,66 54,70 C 58,66 66,65 72,68 L 72,78 C 66,75 58,76 54,80 C 50,76 42,75 36,78 Z" />
+
+    <!-- Book Center Divider -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#D4AF37"
+        android:strokeWidth="1.5"
+        android:pathData="M54,70 L54,80" />
+</vector>

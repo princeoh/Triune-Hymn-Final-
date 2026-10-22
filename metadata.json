@@ -1,0 +1,6 @@
+{
+  "name": "Triune Hymn",
+  "description": "Triune Embassy Hymn app featuring 600 hymns, quick search, categories, favorites, and church resources.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
