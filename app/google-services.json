@@ -3,14 +3,26 @@
     "project_number": "0000000000",
     "project_id": "triune-hymn-final"
   },
-  "client": [{
-    "client_info": {
-      "mobilesdk_app_id": "1:0000000000:android:dummy",
-      "android_client_info": {"package_name": "com.triunehymn.app"}
-    },
-    "oauth_client": [],
-    "api_key": [{"current_key": "dummy"}],
-    "services": {"appinvite_service": {"other_platform_oauth_client": []}}
-  }],
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:0000000000:android:dummy",
+        "android_client_info": {
+          "package_name": "com.triuneembassy.hymn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "dummy"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
   "configuration_version": "1"
 }
