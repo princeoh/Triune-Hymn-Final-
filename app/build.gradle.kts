@@ -18,7 +18,6 @@ android {
     targetSdk = 35
     versionCode = 1
     versionName = "1.0"
-
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
   }
 
@@ -30,12 +29,6 @@ android {
       keyAlias = "upload"
       keyPassword = System.getenv("KEY_PASSWORD")
     }
-    create("debugConfig") {
-      storeFile = file("${rootDir}/debug.keystore")
-      storePassword = "android"
-      keyAlias = "androiddebugkey"
-      keyPassword = "android"
-    }
   }
 
   buildTypes {
@@ -46,7 +39,7 @@ android {
       signingConfig = signingConfigs.getByName("release")
     }
     debug {
-      signingConfig = signingConfigs.getByName("debugConfig")
+      // Use default Android debug keystore - no custom file needed
     }
   }
   compileOptions {
@@ -90,7 +83,6 @@ dependencies {
   implementation(libs.androidx.room.ktx)
   implementation(libs.androidx.room.runtime)
   implementation(libs.converter.moshi)
-  // FIXED: Firebase AI not in BOM 33.7.0 - commented for build to pass
   // implementation(libs.firebase.ai)
   implementation(libs.firebase.firestore)
   // implementation(libs.firebase.appcheck.recaptcha)
